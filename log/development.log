@@ -886,3 +886,2365 @@ Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 10:54:17 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 10:54:17 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-29 11:03:56 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 63ms (Views: 51.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 11:03:56 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 11:03:56 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 11:03:56 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 11:03:56 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 11:03:56 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 11:03:56 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 11:03:56 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 11:03:56 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 11:03:56 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 11:03:56 -0800
+
+
+Started GET "/todo_lists/1/todo_items" for 127.0.0.1 at 2014-11-29 11:03:58 -0800
+Processing by TodoItemsController#index as HTML
+  Parameters: {"todo_list_id"=>"1"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTodoItem Load (1.4ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  [["todo_list_id", 1]]
+  Rendered todo_items/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/todo_lists/1/todo_items/1/complete" for 127.0.0.1 at 2014-11-29 11:04:01 -0800
+Processing by TodoItemsController#complete as HTML
+  Parameters: {"authenticity_token"=>"d7KC0EaWAWp58D6R9jRy9GVX2YjQfD21tIOCLjyA7LU=", "todo_list_id"=>"1", "id"=>"1"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND "todo_items"."id" = ? LIMIT 1  [["todo_list_id", 1], ["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "todo_items" SET "completed_at" = ?, "updated_at" = ? WHERE "todo_items"."id" = 1  [["completed_at", Sat, 29 Nov 2014 19:04:01 UTC +00:00], ["updated_at", Sat, 29 Nov 2014 19:04:01 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/todo_lists/1/todo_items
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/todo_lists/1/todo_items" for 127.0.0.1 at 2014-11-29 11:04:01 -0800
+Processing by TodoItemsController#index as HTML
+  Parameters: {"todo_list_id"=>"1"}
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 1]]
+  Rendered todo_items/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 11:04:01 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 11:04:01 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 11:04:01 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 11:04:01 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 11:04:01 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 11:04:01 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 11:04:01 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 11:04:01 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 11:04:01 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 11:04:01 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-29 12:01:41 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.5ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 85ms (Views: 73.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:01:41 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:01:41 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:01:41 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:01:41 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:01:41 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:01:41 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:01:41 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:01:41 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:01:41 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:01:41 -0800
+
+
+Started GET "/todo_lists/1/todo_items" for 127.0.0.1 at 2014-11-29 12:01:43 -0800
+Processing by TodoItemsController#index as HTML
+  Parameters: {"todo_list_id"=>"1"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+ERROR: compiling _app_views_todo_items_index_html_erb___2873726708253360903_70361117048360 RAISED /Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:7: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...end=( if todo_item.completed? );@output_buffer.safe_append='
+...                               ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:9: syntax error, unexpected keyword_else, expecting ')'
+';  			 else 
+    			     ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:11: syntax error, unexpected keyword_end
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	                             ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+';   end 
+        ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_todo_items_index_html_erb___2873726708253360903_70361117048360(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "todo_items/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>';@output_buffer.append=( @todo_list.title );@output_buffer.safe_append='</h1>
+
+<table class="todo_items">
+';   @todo_list.todo_items.each do |todo_item| 
+@output_buffer.safe_append='  <tr id="';@output_buffer.append=( dom_id(todo_item) );@output_buffer.safe_append='">
+  	<td>
+  		';@output_buffer.append=( if todo_item.completed? );@output_buffer.safe_append='
+  			';@output_buffer.append=( todo_item.completed_at );@output_buffer.safe_append='
+';  			 else 
+@output_buffer.safe_append='  			';@output_buffer.append=( link_to "Mark Complete", complete_todo_list_todo_item_path(todo_item), method: :patch );@output_buffer.safe_append='
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	</td>
+    <td>';@output_buffer.append=( todo_item.content );@output_buffer.safe_append='</td>
+    <td>
+    	';@output_buffer.append=( link_to "Edit", edit_todo_list_todo_item_path(todo_item) );@output_buffer.safe_append='
+    	';@output_buffer.append=( link_to "Delete", todo_list_todo_item_path(todo_item), method: :delete, data: { confirm: "Are you sure?"} );@output_buffer.safe_append=' 
+';@output_buffer.safe_append='    </td>
+  </tr>
+';   end 
+@output_buffer.safe_append='</table>
+
+<p>
+  ';@output_buffer.append=( link_to "New Todo Item", new_todo_list_todo_item_path );@output_buffer.safe_append='
+</p>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `module_eval'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `compile'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:248:in `block in compile!'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `synchronize'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `compile!'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:142:in `block in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:161:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:141:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:413:in `_run__923427694305603082__process_action__callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/migration.rb:369:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__3602212764667294736__call__callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered todo_items/index.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:7: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...end=( if todo_item.completed? );@output_buffer.safe_append='
+...                               ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:9: syntax error, unexpected keyword_else, expecting ')'
+';  			 else 
+    			     ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:11: syntax error, unexpected keyword_end
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	                             ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+';   end 
+        ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'):
+    4:   <% @todo_list.todo_items.each do |todo_item| %>
+    5:   <tr id="<%= dom_id(todo_item) %>">
+    6:   	<td>
+    7:   		<%= if todo_item.completed? %>
+    8:   			<%= todo_item.completed_at %>
+    9:   			<% else %>
+   10:   			<%= link_to "Mark Complete", complete_todo_list_todo_item_path(todo_item), method: :patch %>
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.1) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.1) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.1) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.1) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.1) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.1) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.1) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:413:in `_run__923427694305603082__process_action__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.1) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:373:in `_run__3602212764667294736__call__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/todo_lists/1/todo_items" for 127.0.0.1 at 2014-11-29 12:01:43 -0800
+Processing by TodoItemsController#index as HTML
+  Parameters: {"todo_list_id"=>"1"}
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1  [["id", "1"]]
+ERROR: compiling _app_views_todo_items_index_html_erb___2873726708253360903_70361117834000 RAISED /Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:7: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...end=( if todo_item.completed? );@output_buffer.safe_append='
+...                               ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:9: syntax error, unexpected keyword_else, expecting ')'
+';  			 else 
+    			     ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:11: syntax error, unexpected keyword_end
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	                             ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+';   end 
+        ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_todo_items_index_html_erb___2873726708253360903_70361117834000(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "todo_items/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>';@output_buffer.append=( @todo_list.title );@output_buffer.safe_append='</h1>
+
+<table class="todo_items">
+';   @todo_list.todo_items.each do |todo_item| 
+@output_buffer.safe_append='  <tr id="';@output_buffer.append=( dom_id(todo_item) );@output_buffer.safe_append='">
+  	<td>
+  		';@output_buffer.append=( if todo_item.completed? );@output_buffer.safe_append='
+  			';@output_buffer.append=( todo_item.completed_at );@output_buffer.safe_append='
+';  			 else 
+@output_buffer.safe_append='  			';@output_buffer.append=( link_to "Mark Complete", complete_todo_list_todo_item_path(todo_item), method: :patch );@output_buffer.safe_append='
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	</td>
+    <td>';@output_buffer.append=( todo_item.content );@output_buffer.safe_append='</td>
+    <td>
+    	';@output_buffer.append=( link_to "Edit", edit_todo_list_todo_item_path(todo_item) );@output_buffer.safe_append='
+    	';@output_buffer.append=( link_to "Delete", todo_list_todo_item_path(todo_item), method: :delete, data: { confirm: "Are you sure?"} );@output_buffer.safe_append=' 
+';@output_buffer.safe_append='    </td>
+  </tr>
+';   end 
+@output_buffer.safe_append='</table>
+
+<p>
+  ';@output_buffer.append=( link_to "New Todo Item", new_todo_list_todo_item_path );@output_buffer.safe_append='
+</p>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `module_eval'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `compile'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:248:in `block in compile!'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `synchronize'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `compile!'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:142:in `block in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:161:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:141:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:413:in `_run__923427694305603082__process_action__callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/migration.rb:369:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__3602212764667294736__call__callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered todo_items/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:7: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...end=( if todo_item.completed? );@output_buffer.safe_append='
+...                               ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:9: syntax error, unexpected keyword_else, expecting ')'
+';  			 else 
+    			     ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:11: syntax error, unexpected keyword_end
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	                             ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+';   end 
+        ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'):
+    4:   <% @todo_list.todo_items.each do |todo_item| %>
+    5:   <tr id="<%= dom_id(todo_item) %>">
+    6:   	<td>
+    7:   		<%= if todo_item.completed? %>
+    8:   			<%= todo_item.completed_at %>
+    9:   			<% else %>
+   10:   			<%= link_to "Mark Complete", complete_todo_list_todo_item_path(todo_item), method: :patch %>
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.1) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.1) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.1) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.1) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.1) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.1) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.1) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:413:in `_run__923427694305603082__process_action__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.1) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:373:in `_run__3602212764667294736__call__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-29 12:03:05 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 68ms (Views: 57.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:03:05 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:03:05 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:03:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:03:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:03:05 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:03:05 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:03:05 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:03:05 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:03:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:03:05 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-29 12:06:05 -0800
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:05 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:05 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:05 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:05 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:05 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:05 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:05 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-29 12:06:09 -0800
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:09 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:09 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:09 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:09 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:09 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:09 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:09 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:09 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:09 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:09 -0800
+
+
+Started GET "/todo_lists/1/todo_items" for 127.0.0.1 at 2014-11-29 12:06:11 -0800
+Processing by TodoItemsController#index as HTML
+  Parameters: {"todo_list_id"=>"1"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+ERROR: compiling _app_views_todo_items_index_html_erb__591609706215781951_70224811032360 RAISED /Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:20: syntax error, unexpected keyword_end
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	                             ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+';   end 
+        ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_todo_items_index_html_erb__591609706215781951_70224811032360(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "todo_items/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>';@output_buffer.append=( @todo_list.title );@output_buffer.safe_append='</h1>
+
+<table class="todo_items">
+	<table class="todo_items">
+	<thead>
+		<tr>
+			<th width="25%">Completed?</th>
+			<th width="65%">Content</th>
+			<th width="10%">Functions</th>
+		</tr>
+	</thead>
+	<tbody>
+';   @todo_list.todo_items.each do |todo_item| 
+@output_buffer.safe_append='  <tr id="';@output_buffer.append=( dom_id(todo_item) );@output_buffer.safe_append='">
+  	<td>
+';  		 if todo_item.completed? 
+@output_buffer.safe_append='  			';@output_buffer.append=( todo_item.completed_at );@output_buffer.safe_append='
+';  			 else 
+@output_buffer.safe_append='  			';@output_buffer.append=( link_to "Mark Complete", complete_todo_list_todo_item_path(todo_item), method: :patch );@output_buffer.safe_append='
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	</td>
+    <td>';@output_buffer.append=( todo_item.content );@output_buffer.safe_append='</td>
+    <td>
+    	';@output_buffer.append=( link_to "Edit", edit_todo_list_todo_item_path(todo_item) );@output_buffer.safe_append='
+    	';@output_buffer.append=( link_to "Delete", todo_list_todo_item_path(todo_item), method: :delete, data: { confirm: "Are you sure?"} );@output_buffer.safe_append=' 
+';@output_buffer.safe_append='    </td>
+  </tr>
+';   end 
+@output_buffer.safe_append='	</tbody>
+</table>
+<p>
+  ';@output_buffer.append=( link_to "New Todo Item", new_todo_list_todo_item_path );@output_buffer.safe_append='
+</p>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `module_eval'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `compile'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:248:in `block in compile!'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `synchronize'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `compile!'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:142:in `block in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:161:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:141:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:413:in `_run__3303916552453768727__process_action__callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/migration.rb:369:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__3162761992819456185__call__callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered todo_items/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:20: syntax error, unexpected keyword_end
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	                             ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+';   end 
+        ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:36: syntax error, unexpected keyword_end, expecting ')'):
+    17:   			<%= todo_item.completed_at %>
+    18:   			<% else %>
+    19:   			<%= link_to "Mark Complete", complete_todo_list_todo_item_path(todo_item), method: :patch %>
+    20:   	<%= end %>
+    21:   	</td>
+    22:     <td><%= todo_item.content %></td>
+    23:     <td>
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.1) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.1) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.1) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.1) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.1) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.1) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.1) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:413:in `_run__3303916552453768727__process_action__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.1) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:373:in `_run__3162761992819456185__call__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/todo_lists/1/todo_items" for 127.0.0.1 at 2014-11-29 12:06:11 -0800
+Processing by TodoItemsController#index as HTML
+  Parameters: {"todo_list_id"=>"1"}
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1  [["id", "1"]]
+ERROR: compiling _app_views_todo_items_index_html_erb__591609706215781951_70224818485200 RAISED /Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:20: syntax error, unexpected keyword_end
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	                             ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+';   end 
+        ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_todo_items_index_html_erb__591609706215781951_70224818485200(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "todo_items/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>';@output_buffer.append=( @todo_list.title );@output_buffer.safe_append='</h1>
+
+<table class="todo_items">
+	<table class="todo_items">
+	<thead>
+		<tr>
+			<th width="25%">Completed?</th>
+			<th width="65%">Content</th>
+			<th width="10%">Functions</th>
+		</tr>
+	</thead>
+	<tbody>
+';   @todo_list.todo_items.each do |todo_item| 
+@output_buffer.safe_append='  <tr id="';@output_buffer.append=( dom_id(todo_item) );@output_buffer.safe_append='">
+  	<td>
+';  		 if todo_item.completed? 
+@output_buffer.safe_append='  			';@output_buffer.append=( todo_item.completed_at );@output_buffer.safe_append='
+';  			 else 
+@output_buffer.safe_append='  			';@output_buffer.append=( link_to "Mark Complete", complete_todo_list_todo_item_path(todo_item), method: :patch );@output_buffer.safe_append='
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	</td>
+    <td>';@output_buffer.append=( todo_item.content );@output_buffer.safe_append='</td>
+    <td>
+    	';@output_buffer.append=( link_to "Edit", edit_todo_list_todo_item_path(todo_item) );@output_buffer.safe_append='
+    	';@output_buffer.append=( link_to "Delete", todo_list_todo_item_path(todo_item), method: :delete, data: { confirm: "Are you sure?"} );@output_buffer.safe_append=' 
+';@output_buffer.safe_append='    </td>
+  </tr>
+';   end 
+@output_buffer.safe_append='	</tbody>
+</table>
+<p>
+  ';@output_buffer.append=( link_to "New Todo Item", new_todo_list_todo_item_path );@output_buffer.safe_append='
+</p>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `module_eval'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `compile'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:248:in `block in compile!'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `synchronize'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `compile!'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:142:in `block in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:161:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:141:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:413:in `_run__3303916552453768727__process_action__callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/migration.rb:369:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__3162761992819456185__call__callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered todo_items/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:20: syntax error, unexpected keyword_end
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	                             ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+';   end 
+        ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:36: syntax error, unexpected keyword_end, expecting ')'):
+    17:   			<%= todo_item.completed_at %>
+    18:   			<% else %>
+    19:   			<%= link_to "Mark Complete", complete_todo_list_todo_item_path(todo_item), method: :patch %>
+    20:   	<%= end %>
+    21:   	</td>
+    22:     <td><%= todo_item.content %></td>
+    23:     <td>
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.1) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.1) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.1) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.1) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.1) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.1) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.1) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:413:in `_run__3303916552453768727__process_action__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.1) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:373:in `_run__3162761992819456185__call__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/todo_lists/1" for 127.0.0.1 at 2014-11-29 12:06:19 -0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered todo_lists/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2014-11-29 12:06:20 -0800
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/new" for 127.0.0.1 at 2014-11-29 12:06:21 -0800
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (13.4ms)
+  Rendered todo_lists/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_lists" for 127.0.0.1 at 2014-11-29 12:06:24 -0800
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d7KC0EaWAWp58D6R9jRy9GVX2YjQfD21tIOCLjyA7LU=", "todo_list"=>{"title"=>"adfsf", "description"=>"adsfas"}, "commit"=>"Create Todo list"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "todo_lists" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 29 Nov 2014 20:06:24 UTC +00:00], ["description", "adsfas"], ["title", "adfsf"], ["updated_at", Sat, 29 Nov 2014 20:06:24 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/todo_lists/2
+Completed 302 Found in 7ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/todo_lists/2" for 127.0.0.1 at 2014-11-29 12:06:24 -0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered todo_lists/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:24 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:24 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:24 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:24 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:24 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:24 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:24 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:24 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:24 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:24 -0800
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2014-11-29 12:06:26 -0800
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.2ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/new" for 127.0.0.1 at 2014-11-29 12:06:28 -0800
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (1.6ms)
+  Rendered todo_lists/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_lists" for 127.0.0.1 at 2014-11-29 12:06:30 -0800
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d7KC0EaWAWp58D6R9jRy9GVX2YjQfD21tIOCLjyA7LU=", "todo_list"=>{"title"=>"adsfda", "description"=>"adsfadfssf"}, "commit"=>"Create Todo list"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_lists" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 29 Nov 2014 20:06:30 UTC +00:00], ["description", "adsfadfssf"], ["title", "adsfda"], ["updated_at", Sat, 29 Nov 2014 20:06:30 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/todo_lists/3" for 127.0.0.1 at 2014-11-29 12:06:30 -0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered todo_lists/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:30 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:30 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:30 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:30 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:06:30 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:30 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:30 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:30 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:30 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:06:30 -0800
+
+
+Started GET "/todo_lists/3/edit" for 127.0.0.1 at 2014-11-29 12:06:31 -0800
+Processing by TodoListsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered todo_lists/_form.html.erb (2.2ms)
+  Rendered todo_lists/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2014-11-29 12:06:32 -0800
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.2ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/new" for 127.0.0.1 at 2014-11-29 12:06:33 -0800
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (1.5ms)
+  Rendered todo_lists/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists/new" for 127.0.0.1 at 2014-11-29 12:07:41 -0800
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (2.1ms)
+  Rendered todo_lists/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:07:41 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:07:41 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:41 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:07:41 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:07:41 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:41 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:41 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:41 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:41 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:41 -0800
+
+
+Started GET "/todo_lists/new" for 127.0.0.1 at 2014-11-29 12:07:44 -0800
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (1.6ms)
+  Rendered todo_lists/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:07:45 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:07:45 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:07:45 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:07:45 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:45 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:45 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:45 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:45 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:45 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:45 -0800
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2014-11-29 12:07:46 -0800
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2014-11-29 12:07:54 -0800
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:07:54 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:54 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:07:54 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:07:54 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:54 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:07:54 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:54 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:54 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:54 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:07:54 -0800
+
+
+Started GET "/todo_lists/new" for 127.0.0.1 at 2014-11-29 12:07:58 -0800
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (1.5ms)
+  Rendered todo_lists/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_lists" for 127.0.0.1 at 2014-11-29 12:08:03 -0800
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d7KC0EaWAWp58D6R9jRy9GVX2YjQfD21tIOCLjyA7LU=", "todo_list"=>{"title"=>"xzcc", "description"=>"ZXCz"}, "commit"=>"Create Todo list"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered todo_lists/_form.html.erb (2.5ms)
+  Rendered todo_lists/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:08:03 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:03 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:08:03 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:08:03 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:08:03 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:03 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:03 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:03 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:03 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:03 -0800
+
+
+Started POST "/todo_lists" for 127.0.0.1 at 2014-11-29 12:08:06 -0800
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d7KC0EaWAWp58D6R9jRy9GVX2YjQfD21tIOCLjyA7LU=", "todo_list"=>{"title"=>"xzccXZCxZ", "description"=>"ZXCzXZcZ"}, "commit"=>"Create Todo list"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_lists" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 29 Nov 2014 20:08:06 UTC +00:00], ["description", "ZXCzXZcZ"], ["title", "xzccXZCxZ"], ["updated_at", Sat, 29 Nov 2014 20:08:06 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/todo_lists/4
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/todo_lists/4" for 127.0.0.1 at 2014-11-29 12:08:06 -0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered todo_lists/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:08:06 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:08:06 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:08:06 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:06 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:06 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:08:06 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:06 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:06 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:06 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:06 -0800
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2014-11-29 12:08:07 -0800
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2014-11-29 12:08:10 -0800
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:08:11 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:11 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:08:11 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:08:11 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:08:11 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:11 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:11 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:11 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:11 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:08:11 -0800
+
+
+Started GET "/todo_lists/1/edit" for 127.0.0.1 at 2014-11-29 12:08:15 -0800
+Processing by TodoListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered todo_lists/_form.html.erb (1.8ms)
+  Rendered todo_lists/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2014-11-29 12:08:16 -0800
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.2ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2014-11-29 12:08:19 -0800
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2014-11-29 12:08:19 -0800
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2014-11-29 12:08:20 -0800
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/4" for 127.0.0.1 at 2014-11-29 12:08:22 -0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered todo_lists/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-29 12:13:19 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 65ms (Views: 53.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:13:20 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:13:20 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:13:20 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:13:20 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:13:20 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:13:20 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:13:20 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:13:20 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:13:20 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:13:20 -0800
+
+
+Started GET "/todo_lists/3/todo_items" for 127.0.0.1 at 2014-11-29 12:13:36 -0800
+Processing by TodoItemsController#index as HTML
+  Parameters: {"todo_list_id"=>"3"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "3"]]
+ERROR: compiling _app_views_todo_items_index_html_erb___716585505247480873_70185223678460 RAISED /Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:20: syntax error, unexpected keyword_end
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	                             ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+';   end 
+        ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_todo_items_index_html_erb___716585505247480873_70185223678460(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "todo_items/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>';@output_buffer.append=( @todo_list.title );@output_buffer.safe_append='</h1>
+
+<table class="todo_items">
+	<table class="todo_items">
+	<thead>
+		<tr>
+			<th width="25%">Completed?</th>
+			<th width="65%">Content</th>
+			<th width="10%">Functions</th>
+		</tr>
+	</thead>
+	<tbody>
+';   @todo_list.todo_items.each do |todo_item| 
+@output_buffer.safe_append='  <tr id="';@output_buffer.append=( dom_id(todo_item) );@output_buffer.safe_append='">
+  	<td>
+';  		 if todo_item.completed? 
+@output_buffer.safe_append='  			';@output_buffer.append=( todo_item.completed_at );@output_buffer.safe_append='
+';  			 else 
+@output_buffer.safe_append='  			';@output_buffer.append=( link_to "Mark Complete", complete_todo_list_todo_item_path(todo_item), method: :patch );@output_buffer.safe_append='
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	</td>
+    <td>';@output_buffer.append=( todo_item.content );@output_buffer.safe_append='</td>
+    <td>
+    	';@output_buffer.append=( link_to "Edit", edit_todo_list_todo_item_path(todo_item) );@output_buffer.safe_append='
+    	';@output_buffer.append=( link_to "Delete", todo_list_todo_item_path(todo_item), method: :delete, data: { confirm: "Are you sure?"} );@output_buffer.safe_append=' 
+';@output_buffer.safe_append='    </td>
+  </tr>
+';   end 
+@output_buffer.safe_append='	</tbody>
+</table>
+<p>
+  ';@output_buffer.append=( link_to "New Todo Item", new_todo_list_todo_item_path );@output_buffer.safe_append='
+</p>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `module_eval'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `compile'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:248:in `block in compile!'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `synchronize'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `compile!'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:142:in `block in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:161:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/template.rb:141:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:413:in `_run__4240121113946975934__process_action__callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activerecord-4.0.1/lib/active_record/migration.rb:369:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__2470724238861376405__call__callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered todo_items/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:20: syntax error, unexpected keyword_end
+  	';@output_buffer.append=( end );@output_buffer.safe_append='
+  	                             ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+';   end 
+        ^
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/adamwohlberg/treehouse/projects/odot/app/views/todo_items/index.html.erb:36: syntax error, unexpected keyword_end, expecting ')'):
+    17:   			<%= todo_item.completed_at %>
+    18:   			<% else %>
+    19:   			<%= link_to "Mark Complete", complete_todo_list_todo_item_path(todo_item), method: :patch %>
+    20:   	<%= end %>
+    21:   	</td>
+    22:     <td><%= todo_item.content %></td>
+    23:     <td>
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.1) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.1) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.1) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.1) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.1) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.1) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.1) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:413:in `_run__4240121113946975934__process_action__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.1) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:373:in `_run__2470724238861376405__call__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/adamwohlberg/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.5ms)
+
+
+Started GET "/todo_lists/3/todo_items" for 127.0.0.1 at 2014-11-29 12:14:43 -0800
+Processing by TodoItemsController#index as HTML
+  Parameters: {"todo_list_id"=>"3"}
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mTodoItem Load (1.3ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 3]]
+  Rendered todo_items/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:43 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:43 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:43 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:43 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:43 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:43 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:43 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:43 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:43 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:43 -0800
+
+
+Started GET "/todo_lists/3/todo_items/new" for 127.0.0.1 at 2014-11-29 12:14:46 -0800
+Processing by TodoItemsController#new as HTML
+  Parameters: {"todo_list_id"=>"3"}
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered todo_items/_form.html.erb (5.6ms)
+  Rendered todo_items/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 44ms (Views: 14.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/todo_lists/3/todo_items" for 127.0.0.1 at 2014-11-29 12:14:49 -0800
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d7KC0EaWAWp58D6R9jRy9GVX2YjQfD21tIOCLjyA7LU=", "todo_item"=>{"content"=>"fuck"}, "commit"=>"Save", "todo_list_id"=>"3"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "todo_items" ("content", "created_at", "todo_list_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "fuck"], ["created_at", Sat, 29 Nov 2014 20:14:49 UTC +00:00], ["todo_list_id", 3], ["updated_at", Sat, 29 Nov 2014 20:14:49 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/todo_lists/3/todo_items
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/todo_lists/3/todo_items" for 127.0.0.1 at 2014-11-29 12:14:49 -0800
+Processing by TodoItemsController#index as HTML
+  Parameters: {"todo_list_id"=>"3"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  [["todo_list_id", 3]]
+  Rendered todo_items/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:49 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:49 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:49 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:49 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:49 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:49 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:49 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:49 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:49 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:49 -0800
+
+
+Started PATCH "/todo_lists/3/todo_items/4/complete" for 127.0.0.1 at 2014-11-29 12:14:50 -0800
+Processing by TodoItemsController#complete as HTML
+  Parameters: {"authenticity_token"=>"d7KC0EaWAWp58D6R9jRy9GVX2YjQfD21tIOCLjyA7LU=", "todo_list_id"=>"3", "id"=>"4"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND "todo_items"."id" = ? LIMIT 1  [["todo_list_id", 3], ["id", "4"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "todo_items" SET "completed_at" = ?, "updated_at" = ? WHERE "todo_items"."id" = 4  [["completed_at", Sat, 29 Nov 2014 20:14:50 UTC +00:00], ["updated_at", Sat, 29 Nov 2014 20:14:50 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/todo_lists/3/todo_items
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/todo_lists/3/todo_items" for 127.0.0.1 at 2014-11-29 12:14:50 -0800
+Processing by TodoItemsController#index as HTML
+  Parameters: {"todo_list_id"=>"3"}
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 3]]
+  Rendered todo_items/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:50 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:50 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:50 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:50 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:50 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:50 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:50 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:50 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:50 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:50 -0800
+
+
+Started GET "/todo_lists/3/todo_items/new" for 127.0.0.1 at 2014-11-29 12:14:52 -0800
+Processing by TodoItemsController#new as HTML
+  Parameters: {"todo_list_id"=>"3"}
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered todo_items/_form.html.erb (0.5ms)
+  Rendered todo_items/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/todo_lists/3/todo_items" for 127.0.0.1 at 2014-11-29 12:14:55 -0800
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d7KC0EaWAWp58D6R9jRy9GVX2YjQfD21tIOCLjyA7LU=", "todo_item"=>{"content"=>"coffee"}, "commit"=>"Save", "todo_list_id"=>"3"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "todo_items" ("content", "created_at", "todo_list_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "coffee"], ["created_at", Sat, 29 Nov 2014 20:14:55 UTC +00:00], ["todo_list_id", 3], ["updated_at", Sat, 29 Nov 2014 20:14:55 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/todo_lists/3/todo_items
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/todo_lists/3/todo_items" for 127.0.0.1 at 2014-11-29 12:14:55 -0800
+Processing by TodoItemsController#index as HTML
+  Parameters: {"todo_list_id"=>"3"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?  [["todo_list_id", 3]]
+  Rendered todo_items/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:55 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:55 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:55 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:55 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:55 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-11-29 12:14:55 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:55 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:55 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:55 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 12:14:55 -0800
