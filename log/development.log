@@ -3762,3 +3762,43 @@ Migrating to CreateUsers (20141201210229)
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141201210229"]]
   [1m[35m (0.7ms)[0m  commit transaction
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 17:00:40 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.6ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 101ms (Views: 86.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 17:00:40 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 17:00:40 -0800
+
+
+Started GET "/assets/todo_items.css?body=1" for 127.0.0.1 at 2014-12-01 17:00:40 -0800
+
+
+Started GET "/assets/todo_lists.css?body=1" for 127.0.0.1 at 2014-12-01 17:00:40 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-01 17:00:40 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 17:00:40 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 17:00:40 -0800
+
+
+Started GET "/assets/todo_items.js?body=1" for 127.0.0.1 at 2014-12-01 17:00:40 -0800
+
+
+Started GET "/assets/todo_lists.js?body=1" for 127.0.0.1 at 2014-12-01 17:00:40 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 17:00:40 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
