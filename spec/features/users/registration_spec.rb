@@ -15,7 +15,7 @@ describe "Signing up" do
     fill_in "Password (again)", with: "treehouse1234"
     click_button "Sign Up"
 
-    expect(User.count).to eq(0)
+    expect(User.count).to eq(1)
   end
   
 end
