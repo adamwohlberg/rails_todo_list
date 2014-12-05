@@ -5,7 +5,9 @@ describe User do
 	{
 	first_name: "Jason",
 	last_name: "Seifer",
-	email: "jason@teamtreehouse.com"
+	email: "jason@teamtreehouse.com",
+	password: "treehouse1234",
+	password_confirmation: "treehouse1234"
 	}
 }
   context "validations" do
